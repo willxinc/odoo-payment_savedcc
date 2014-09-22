@@ -10,16 +10,20 @@
                 <input type='hidden' name='reference' t-att-value='reference'/>
                 <input type='hidden' name='amount' t-att-value='amount or "0.0"'/>
                 <input type='hidden' name='currency' t-att-value='currency.name'/>
-                Cardholder Name:<br /><input type="text" name="ccName" value=""/><br />
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                <script type="text/javascript" src="/payment_savedcc/static/src/js/jquery.creditCardValidator.js"></script>
+                Card Number:<br /><input type="text" name="ccNumber" value="" valid="false"></input><br />
+                Expiry Date (MM/YY):<br /><input type="text" name="ccDate" value=""></input><br />
+                Security Code:<br /><input type="text" name="ccCode" value=""/><br />
+                Cardholder Name:<br /><input type="text" name="ccName" value=""></input><br />
                 Card Type: <select name="ccType">
                     <option VALUE="visa">Visa</option>
                     <option VALUE="mastercard">Master Card</option>
                 </select><br />
-                Card Number:<br /><input type="text" name="ccNumber" value=""/><br />
-                Expiry Date:<br /><input type="text" name="ccDate" value=""/><br />
-                Security Code:<br /><input type="text" name="ccCode" value=""/><br />
                 <!-- submit -->
-                <button type="submit" width="100px"
+                <script type="text/javascript" src="/payment_savedcc/static/src/js/verify.js">
+                </script>
+                <button disabled="disabled" type="submit" name="ccSub" width="100px"
                     t-att-class="submit_class">
                     <img t-if="not submit_txt" src="/payment_savedcc/static/src/img/savedcc_icon.png"/>
                     <span t-if="submit_txt"><t t-esc="submit_txt"/> <span class="fa fa-long-arrow-right"/></span>
