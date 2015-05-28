@@ -12,11 +12,11 @@
                 <input type='hidden' name='currency' t-att-value='currency.name'/>
                 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
                 <script type="text/javascript" src="/payment_savedcc/static/src/js/jquery.creditCardValidator.js"></script>
-                Card Number:<br /><input type="text" name="ccNumber" value="" valid="false"></input><br />
-                Expiry Date (MM/YY):<br /><input type="text" name="ccDate" value=""></input><br />
-                Security Code:<br /><input type="text" name="ccCode" value=""/><br />
-                Cardholder Name:<br /><input type="text" name="ccName" value=""></input><br />
-                Card Type: <select name="ccType">
+                <span id="txtCNum">Card Number:</span><br /><input type="text" name="ccNumber" value="" valid="false"></input><br />
+                <span id="txtCExd">Expiry Date (MM/YY):</span><br /><input type="text" name="ccDate" value=""></input><br />
+                <!--<span id="txtSec">Security Code:</span><br /><input type="text" name="ccCode" value=""/><br />-->
+                <span id="txtCNam">Cardholder Name:</span><br /><input type="text" name="ccName" value=""></input><br />
+                <span id="txtTyp">Card Type: </span><select name="ccType">
                     <option VALUE="visa">Visa</option>
                     <option VALUE="mastercard">Master Card</option>
                 </select><br />

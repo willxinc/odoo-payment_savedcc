@@ -7,7 +7,7 @@
     'version': '1.0',
     'description': """Saved CC Payment Acquirer""",
     'author': 'xyenDev',
-    'depends': ['payment'],
+    'depends': ['payment', 'website_payment'],
     'data': [
         'views/savedcc.xml',
         'views/payment_acquirer.xml',

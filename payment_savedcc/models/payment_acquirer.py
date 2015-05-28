@@ -103,6 +103,6 @@ class SavedCCPaymentTransaction(osv.Model):
             _logger.info(error)
             data.update(state='error', state_message=error)
         else:
-            _logger.info('Validated savedcc payment for tx %s: set as pending' % (tx.reference)),
-            data.update(state='pending')
+            _logger.info('Validated savedcc payment for tx %s: set as done' % (tx.reference)),
+            data.update(state='done', date_validate=data.get('date_stamp', fields.datetime.now()))
         return tx.write(data)
